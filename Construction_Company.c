@@ -25,10 +25,10 @@ int main()
     
     Remainder = buildingCost - thresholdOne;
     
-    if(buildingCost < thresholdOne){
+    if(buildingCost <= thresholdOne){
         fee = buildingCost*0.10;
         printf("Our fee is $%.2f", fee);
-    } else if(buildingCost > thresholdOne && Remainder < thresholdTwo){
+    } else if(buildingCost > thresholdOne && Remainder <= thresholdTwo){
         fee = Remainder*0.05 + firstCommission;
         printf("Our fee is $%.2f", fee);
     } else if(buildingCost > thresholdOne && Remainder > thresholdTwo){
